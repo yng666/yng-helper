@@ -1,6 +1,6 @@
 <?php
 
-namespace Yng\contract;
+namespace Yng\Contract;
 
 interface Arrayable
 {
