@@ -9,7 +9,7 @@ class Arr
 {
 
     /**
-     * 确定给定值是否可被数组访问
+     * Determine whether the given value is array accessible.
      *
      * @param mixed $value
      * @return bool
@@ -20,7 +20,7 @@ class Arr
     }
 
     /**
-     * 如果数组中不存在元素，则使用.符号将其添加到数组中
+     * Add an element to an array using "dot" notation if it doesn't exist.
      *
      * @param array  $array
      * @param string $key
@@ -37,7 +37,7 @@ class Arr
     }
 
     /**
-     * 将数组的数组折叠为单个数组
+     * Collapse an array of arrays into a single array.
      *
      * @param array $array
      * @return array
@@ -60,7 +60,7 @@ class Arr
     }
 
     /**
-     * 交叉连接给定的数组，返回所有可能的排列.
+     * Cross join the given arrays, returning all possible permutations.
      *
      * @param array ...$arrays
      * @return array
@@ -87,7 +87,7 @@ class Arr
     }
 
     /**
-     * 将一个数组分成两个数组。一个带有键，另一个带有值。
+     * Divide an array into two arrays. One with keys and the other with values.
      *
      * @param array $array
      * @return array
@@ -98,7 +98,7 @@ class Arr
     }
 
     /**
-     * 用点压平多维关联数组。
+     * Flatten a multi-dimensional associative array with dots.
      *
      * @param array  $array
      * @param string $prepend
@@ -120,7 +120,7 @@ class Arr
     }
 
     /**
-     * 获取除指定键数组外的所有给定数组
+     * Get all of the given array except for a specified array of keys.
      *
      * @param array        $array
      * @param array|string $keys
@@ -134,7 +134,7 @@ class Arr
     }
 
     /**
-     * 判断指定key是否存在数组中
+     * Determine if the given key exists in the provided array.
      *
      * @param \ArrayAccess|array $array
      * @param string|int         $key
@@ -150,7 +150,7 @@ class Arr
     }
 
     /**
-     * 返回数组中第一个有真值的元素
+     * Return the first element in an array passing a given truth test.
      *
      * @param array         $array
      * @param callable|null $callback
@@ -179,7 +179,7 @@ class Arr
     }
 
     /**
-     * 返回数组中通过给定真值测试的最后一个元素
+     * Return the last element in an array passing a given truth test.
      *
      * @param array         $array
      * @param callable|null $callback
@@ -196,7 +196,7 @@ class Arr
     }
 
     /**
-     * 将多维数组平展为单个层次
+     * Flatten a multi-dimensional array into a single level.
      *
      * @param array $array
      * @param int   $depth
@@ -266,7 +266,7 @@ class Arr
     }
 
     /**
-     * 使用.获取数组中的一项
+     * Get an item from an array using "dot" notation.
      *
      * @param \ArrayAccess|array $array
      * @param string             $key
@@ -303,7 +303,7 @@ class Arr
     }
 
     /**
-     * 使用“点”符号检查数组中是否存在一个或多个项。
+     * Check if an item or items exist in an array using "dot" notation.
      *
      * @param \ArrayAccess|array $array
      * @param string|array       $keys
@@ -337,8 +337,10 @@ class Arr
     }
 
     /**
-     * 确定数组是否关联。
-     * 如果数组没有以0开头的连续数字键，则数组是“关联的”。
+     * Determines if an array is associative.
+     *
+     * An array is "associative" if it doesn't have sequential numerical keys beginning with zero.
+     *
      * @param array $array
      * @return bool
      */
@@ -350,7 +352,7 @@ class Arr
     }
 
     /**
-     * 获取数组中的子集
+     * Get a subset of the items from the given array.
      *
      * @param array        $array
      * @param array|string $keys
@@ -362,7 +364,7 @@ class Arr
     }
 
     /**
-     * 从数组中提取一个值数组
+     * Pluck an array of values from an array.
      *
      * @param array             $array
      * @param string|array      $value
@@ -398,7 +400,7 @@ class Arr
     }
 
     /**
-     * 分解传递给“pluck”的“value”和“key”参数。
+     * Explode the "value" and "key" arguments passed to "pluck".
      *
      * @param string|array      $value
      * @param string|array|null $key
@@ -414,7 +416,7 @@ class Arr
     }
 
     /**
-     * 往数组添加里添加数据
+     * Push an item onto the beginning of an array.
      *
      * @param array $array
      * @param mixed $value
@@ -450,7 +452,7 @@ class Arr
     }
 
     /**
-     * 从数组中获取一个或指定数量的随机值
+     * Get one or a specified number of random values from an array.
      *
      * @param array    $array
      * @param int|null $number
@@ -490,9 +492,9 @@ class Arr
     }
 
     /**
-     * 使用.表示法将数组项设置为给定值.
+     * Set an array item to a given value using "dot" notation.
      *
-     * 如果没有给该方法任何键，则整个数组将被替换
+     * If no key is given to the method, the entire array will be replaced.
      *
      * @param array  $array
      * @param string $key
@@ -590,7 +592,7 @@ class Arr
      */
     public static function query($array)
     {
-        return http_build_query($array, 'null', '&', PHP_QUERY_RFC3986);
+        return http_build_query($array, '', '&', PHP_QUERY_RFC3986);
     }
 
     /**
@@ -606,7 +608,7 @@ class Arr
     }
 
     /**
-     * 如果给定的值不是数组，也不是null，则将其包装为一个数组
+     * If the given value is not an array and not null, wrap it in one.
      *
      * @param mixed $value
      * @return array
