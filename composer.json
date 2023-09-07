@@ -16,7 +16,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Yng\\": "src"
+            "Yng\\": "src/"
         },
         "files": [
             "src/helper.php"
